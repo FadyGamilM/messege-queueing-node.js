@@ -1,6 +1,6 @@
 import rabbitmq from "amqplib"
 
-export const queueName: string = "task_queue";
+export const queueName: string = "simple_queue";
 export const msg : string = `msg added at ${( 24 - new Date().getHours() )}`
 
 

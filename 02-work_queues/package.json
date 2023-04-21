@@ -1,0 +1,22 @@
+{
+  "name": "02-work-queues",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-publisher": "ts-node-dev --respawn --transpile-only src/publisher.ts",
+    "dev-subscriber": "ts-node-dev --respawn --transpile-only src/subscriber.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/amqplib": "^0.10.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}
