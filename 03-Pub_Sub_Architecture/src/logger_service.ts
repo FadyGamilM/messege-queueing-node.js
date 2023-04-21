@@ -14,6 +14,7 @@ const publishLogs= async (log_msg: string)=>
    await createOrCheckExchange(channel, exchangeName, "fanout", true)
 
    // (4) publish the message to the exchange 
+   // "" => for all queues not specific routing key 
    channel.publish(exchangeName, "", Buffer.from(log_msg))
 
    // (5) console checking 
