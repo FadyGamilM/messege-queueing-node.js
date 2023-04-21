@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-publisher": "ts-node-dev --respawn --transpile-only src/publisher.ts",
+    "dev-publisher": "ts-node-dev --respawn --transpile-only src/logger_service.ts",
     "dev-subscriber": "ts-node-dev --respawn --transpile-only src/subscriber.ts"
   },
   "keywords": [],
@@ -20,3 +20,4 @@
     "amqplib": "^0.10.3"
   }
 }
+

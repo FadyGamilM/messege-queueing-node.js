@@ -11,7 +11,7 @@ export const createRabbitmqConnection = async (instanceUrl : string) => await ra
 export const createRabbitmqChannel = async (connection : rabbitmq.Connection) => await (connection).createChannel()
 
 // create or check if there is any queue with that given name 
-export const createOrCheckQueue = async (channel : rabbitmq.Channel, queueName : string, isDurable : boolean) => await (channel).assertQueue(queueName, {durable: isDurable})
+export const createOrCheckQueue = async (channel : rabbitmq.Channel, queueName : string, isDurable : boolean, isExclusive: boolean = false) => await (channel).assertQueue(queueName, {durable: isDurable, exclusive: isExclusive})
 
 // create or check if there is an exchange with that given name 
 export const createOrCheckExchange = async (channel: rabbitmq.Channel, exchangeName: string, exchangeType: string, isDurable: boolean) => await channel.assertExchange(exchangeName, exchangeType, {durable: isDurable})

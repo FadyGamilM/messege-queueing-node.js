@@ -11,7 +11,7 @@ const publishLogs= async (log_msg: string)=>
    const channel = await createRabbitmqChannel(connection)
 
    // (3) assert the exchange existence 
-   await createOrCheckExchange(channel, exchangeName, "fanout", true)
+   await createOrCheckExchange(channel, exchangeName, "fanout", false)
 
    // (4) publish the message to the exchange 
    // "" => for all queues not specific routing key 
